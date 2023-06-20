@@ -35,7 +35,122 @@
 
   <body>
 
-    <header class="container-fluid"></header>
+    <header class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-lg-4 my-5 py-1 py-lg-0 text-center text-lg-left">
+                <a href="{% url 'home' %}">
+                    <h2 class="logo">
+                        <strong>Lift, Life, Long</strong>
+                    </h2>
+                </a>
+            </div>
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                <nav class="nav-bar">
+                    <ul class="nav-items">
+                        <li class="nav-links">
+                            <a class="nav-links-active" href="{% url 'home' %}">
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-links">
+                            <a class="nav-links-active" href="#">
+                                Locations
+                            </a>
+                        </li>
+                        <li class="nav-links">
+                            <a class="nav-links-active" href="#">
+                                FAQ's
+                            </a>
+                        </li>
+                        {% if request.user.is_authenticated %}
+                        {% if request.user.is_superuser %}
+                        <li class="nav-links">
+                            <a href="#">
+                                Gym Management
+                            </a>
+                        </li>
+                        {% endif %}                      
+                        <li class="nav-links">
+                            <a href="#">
+                                My Account
+                            </a>
+                        </li>
+                        <li class="nav-links">
+                            <a href="{% url 'account_logout' %}">
+                                Logout
+                            </a>
+                        </li>
+                        {% else %}
+                        <li class="nav-links">
+                            <a class="nav-links-active" href="{% url 'account_signup' %}">
+                                Join Now
+                           </a>
+                        </li>
+                        <li class="nav-links">
+                            <a class="nav-links-active" href="{% url 'account_login' %}">
+                                Login
+                            </a>
+                        </li>
+                        {% endif %}
+                        <li class="nav-links">
+                            <a class="nav-links-active" href="#">
+                                Social Blog
+                            </a>
+                        </li>
+                        <li class="nav-links">
+                            <a class="nav-links-active" href="#">
+                                Live, Life, Long, Lifestyle
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                <div class="dropdown">
+                    <button class="btn btn-secondary" type="button" data-toggle="dropdown" aria-expanded="false">
+                      Menu
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="{% url 'home' %}">
+                            Home
+                        </a>
+                        <a href="#">
+                            Locations
+                        </a>
+                        <a href="#">
+                            FAQ's
+                        </a>
+                        {% if request.user.is_authenticated %}
+                        {% if request.user.is_superuser %}
+                        <a href="#">
+                            Gym Management
+                        </a>
+                        {% endif %}
+                        <a href="#">
+                            My Account
+                        </a>
+                        <a href="{% url 'account_logout' %}">
+                            Logout
+                        </a>
+                        {% else %}
+                        <a class="nav-links-active" href="{% url 'account_signup' %}">
+                            Join Now
+                        </a>
+                        <a class="nav-links-active" href="{% url 'account_login' %}">
+                            Login
+                        </a>
+                        {% endif %}
+                        <a class="nav-links-active" href="#">
+                            Social Blog
+                        </a>
+                        <a class="nav-links-active" href="#">
+                            Live, Life, Long, Lifestyle
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
     {% if messages %}
     <div class="message-container"></div>
