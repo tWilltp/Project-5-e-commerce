@@ -9,3 +9,8 @@ def index(request):
 def locations(request):
     """ returns gym locations page"""
     return render(request, "home/locations.html")
+
+
+def FAQs(request):
+    """ returns gym locations page"""
+    return render(request, "home/FAQs.html")

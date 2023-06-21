@@ -54,12 +54,12 @@
                             </a>
                         </li>
                         <li class="nav-links">
-                            <a class="nav-links-active" href="#">
+                            <a class="nav-links-active" href="{% url 'locations' %}">
                                 Locations
                             </a>
                         </li>
                         <li class="nav-links">
-                            <a class="nav-links-active" href="#">
+                            <a class="nav-links-active" href="{% url 'FAQs' %}">
                                 FAQ's
                             </a>
                         </li>
@@ -115,10 +115,10 @@
                         <a class="dropdown-links" href="{% url 'home' %}">
                             Home
                         </a>
-                        <a class="dropdown-links" href="#">
+                        <a class="dropdown-links" href="{% url 'locations' %}">
                             Locations
                         </a>
-                        <a class="dropdown-links" href="#">
+                        <a class="dropdown-links" href="{% url 'FAQs' %}">
                             FAQ's
                         </a>
                         {% if request.user.is_authenticated %}
