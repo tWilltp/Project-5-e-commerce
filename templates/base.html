@@ -36,16 +36,16 @@
 
   <body>
 
-    <header class="container-fluid">
+    <header class="container-fluid header">
         <div class="row">
-            <div class="col-12 col-lg-4 my-5 py-1 py-lg-0 text-center text-lg-left">
+            <div class="col-12 col-lg-3 my-5 py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}">
                     <h2 class="logo">
                         <strong>Lift, Life, Long</strong>
                     </h2>
                 </a>
             </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+            <div class="col-12 col-lg-8 my-auto py-1 py-lg-0">
                 <nav class="nav-bar">
                     <ul class="nav-items">
                         <li class="nav-links">
@@ -106,45 +106,45 @@
                     </ul>
                 </nav>
             </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+            <div class="col-6 d-block d-lg-none my-auto py-1 py-lg-0">
                 <div class="dropdown">
                     <button class="btn btn-secondary" type="button" data-toggle="dropdown" aria-expanded="false">
                       Menu
                     </button>
                     <div class="dropdown-menu">
-                        <a href="{% url 'home' %}">
+                        <a class="dropdown-links" href="{% url 'home' %}">
                             Home
                         </a>
-                        <a href="#">
+                        <a class="dropdown-links" href="#">
                             Locations
                         </a>
-                        <a href="#">
+                        <a class="dropdown-links" href="#">
                             FAQ's
                         </a>
                         {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
-                        <a href="#">
+                        <a class="dropdown-links" href="#">
                             Gym Management
                         </a>
                         {% endif %}
-                        <a href="#">
+                        <a class="dropdown-links" href="#">
                             My Account
                         </a>
-                        <a href="{% url 'account_logout' %}">
+                        <a class="dropdown-links" href="{% url 'account_logout' %}">
                             Logout
                         </a>
                         {% else %}
-                        <a class="nav-links-active" href="{% url 'account_signup' %}">
+                        <a class="dropdown-links" href="{% url 'account_signup' %}">
                             Join Now
                         </a>
-                        <a class="nav-links-active" href="{% url 'account_login' %}">
+                        <a class="dropdown-links" href="{% url 'account_login' %}">
                             Login
                         </a>
                         {% endif %}
-                        <a class="nav-links-active" href="#">
+                        <a class="dropdown-links" href="#">
                             Social Blog
                         </a>
-                        <a class="nav-links-active" href="#">
+                        <a class="dropdown-links" href="#">
                             Live, Life, Long, Lifestyle
                         </a>
                     </div>
@@ -152,6 +152,8 @@
             </div>
         </div>
     </header>
+
+    <!-- footer row1 signup reviews social row2 social links -->
 
     {% if messages %}
     <div class="message-container"></div>
