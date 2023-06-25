@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 # class GymClass():
@@ -7,9 +8,11 @@ from django.db import models
 #     classLocation = models.ForeignKey(GymLocation,)
 
 
-# class GymLocation():
-#     name = models.TextField()
-#     location = models.TextField()
+class GymLocation(models.Model):
+    name = models.TextField(max_length=20)
+    location = models.CharField(max_length=100)
+    equipment = []
+    # classes = models.ForeignKey(GymClass)
 
 
 # class PaymentOption():
