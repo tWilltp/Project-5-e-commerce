@@ -153,8 +153,6 @@
         </div>
     </header>
 
-    <!-- footer row1 signup reviews social row2 social links -->
-
     {% if messages %}
     <div class="message-container"></div>
     {% endif %}
@@ -164,6 +162,68 @@
 
     {% block content %}
     {% endblock %}
+
+    <!-- footer row1 signup reviews social row2 social links -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-4 text-center">
+                    <div class="icon">
+                        <a href="#"></a>
+                    </div>
+                    <h2>Signup at one of our Gyms</h2>
+                    <div class="dropdown">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                            aria-expanded="false">
+                            Locations
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">gym1</a>
+                            <a class="dropdown-item" href="#">gym2</a>
+                            <a class="dropdown-item" href="#">gym3</a>
+                            <a class="dropdown-item" href="#">gym4</a>
+                            <a class="dropdown-item" href="#">gym5</a>
+                            <a class="dropdown-item" href="#">gym6</a>
+                            <a class="dropdown-item" href="#">gym7</a>
+                            <a class="dropdown-item" href="#">gym8</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 text-center">
+                    <div class="icon">
+                        <a href="#"></a>
+                    </div>
+                    <h2>5 STARS</h2>
+                    <p>stars icon here</p>
+                    <p>our members all rate us 5 stars</p>
+                </div>
+                <div class="col-4 text-center">
+                    <div class="icon">
+                        <a href="#"></a>
+                    </div>
+                    <h2>See our Classes</h2>
+                    <div class="btn btn-lg">Classes</div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <ul class="social-list">
+                        <li class="social-links">"social-links"</li>
+                        <li class="social-links">"social-links"</li>
+                        <li class="social-links">"social-links"</li>
+                        <li class="social-links">"social-links"</li>
+                    </ul>
+                </div>
+                <div class="col-6 text-center">
+                    <h2>Lift, Life, Long Blog</h2>
+                    <a href="#">link to blog</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     {% block postloadjs %}
     {% endblock %}
