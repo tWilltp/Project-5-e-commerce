@@ -6,4 +6,6 @@ from django_summernote.admin import SummernoteModelAdmin
 @admin.register(GymLocation)
 class LocationsAdmin(SummernoteModelAdmin):
 
-    list_display = ('name', 'location', 'equipment')
+    list_display = (
+        'location', 'address', 'phone_number', 'equipment', 'gym_num')
+    # list_filter = ('equipment', 'gym_num')

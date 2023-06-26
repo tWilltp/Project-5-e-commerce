@@ -20,20 +20,20 @@
 {% block content %}
 <div class="container">
     <div class="row">
+        {% for locations in locations %}
         <div class="col-lg-3 col-sm-6 text-center">
             <a href="#">
                 <h2 class="logo">
                     <strong>Lift, Life, Long</strong>
                 </h2>
                 <h4>
-                    Location
+                    {% locations.location %}
                 </h4>
                 <p>
-                    full address and <br>
-                    postcode
+                    {% locations.address %}
                 </p>
                 <p>
-                    1234567890
+                    {% locations.phone_number %}
                 </p>
             </a>
         </div>
