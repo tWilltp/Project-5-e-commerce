@@ -8,14 +8,13 @@ def index(request):
     return render(request, "home/index.html")
 
 
-class LocationsView(View):
+def LocationsView(request):
     """ returns gym locations page"""
-    model = GymLocation
-    template_name = 'locations.html'
+    return render(request, "home/locations.html")
 
 
 def locations_detail(request):
-    """ returns specific gym on individual page """
+    """ returns specific gym location page"""
     return render(request, "home/locations_detail.html")
 
 
