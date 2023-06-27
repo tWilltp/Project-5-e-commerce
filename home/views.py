@@ -19,8 +19,9 @@ def locations_detail(request):
     return render(request, "home/locations_detail.html")
 
 
-class LoactionsDetail(View):
-    pass
+# class LoactionsDetail(View):
+#     """ returns specific gym on individual page """
+#     return render(request, "home/locations_detail.html")
 
 
 def FAQs(request):
