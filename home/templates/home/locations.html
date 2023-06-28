@@ -21,21 +21,23 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-3 col-sm-6 text-center">
+            {% for locations in locations %}
             <a href="{% url 'locations_detail' %}">
                 <h2 class="logo">
                     <strong>Lift, Life, Long</strong>
                 </h2>
                 <h4>
-                    {{ GymLocation.location }}
+                    {{ locations.location }}
                 </h4>
                 <p>
-                    {{ GymLocation.address }} <br>
-                    {{ GymLocation.postcode }}
+                    {{ locations.address }} <br>
+                    {{ locations.postcode }}
                 </p>
                 <p>
-                    {{ GymLocation.phone_number }}
+                    {{ locations.phone_number }}
                 </p>
             </a>
+            {% endfor %}
         </div>
         <div class="col-lg-3 col-sm-6 text-center">
             <a href="{% url 'locations_detail' %}">

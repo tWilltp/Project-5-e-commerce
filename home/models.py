@@ -3,9 +3,15 @@ from django.contrib.auth.models import User
 
 
 class PaymentOption(models.Model):
-    annual = int()
-    monthly = int()
-    day_pass = int()
+    annual = models.DecimalField(
+        max_digits=6, decimal_places=2, null=True, blank=True)
+    monthly = models.DecimalField(
+        max_digits=6, decimal_places=2, null=True, blank=True)
+    day_pass = models.DecimalField(
+        max_digits=4, decimal_places=2, null=True, blank=True)
+
+    class Meta:
+        verbose_name_plural = 'PaymentOption'
 
 
 class User(models.Model):
@@ -15,10 +21,16 @@ class User(models.Model):
     payment_option = models.ForeignKey(
         PaymentOption, on_delete=models.CASCADE, related_name="subscription")
 
+    class Meta:
+        verbose_name_plural = 'User'
+
 
 class GymClass(models.Model):
     class_name = models.TextField(max_length=20, unique=True)
     class_schedule = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name_plural = 'GymClass'
 
 
 class EquipmentFacilities(models.Model):
@@ -29,6 +41,9 @@ class EquipmentFacilities(models.Model):
     sauna = models.BooleanField()
     pool = models.BooleanField()
     personal_trainer = models.BooleanField()
+
+    class Meta:
+        verbose_name_plural = 'EquipmentFacilities'
 
 
 class GymLocation(models.Model):
@@ -41,6 +56,9 @@ class GymLocation(models.Model):
     classes = models.ForeignKey(
         'GymClass', on_delete=models.CASCADE, default=True, related_name="classes")
 
+    class Meta:
+        verbose_name_plural = 'GymLocation'
+
 
 class Attendance(models.Model):
     user = models.ForeignKey(
@@ -48,3 +66,6 @@ class Attendance(models.Model):
     location = models.ForeignKey(
         GymLocation, on_delete=models.CASCADE, related_name="class_location")
     scheduled = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name_plural = 'Attendance'
