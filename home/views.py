@@ -10,11 +10,15 @@ def index(request):
 
 def LocationsView(request):
     """ returns gym locations page"""
+    model = GymLocation
+
     return render(request, "home/locations.html")
 
 
 def locations_detail(request):
     """ returns specific gym location page"""
+    model = GymLocation
+    
     return render(request, "home/locations_detail.html")
 
 
