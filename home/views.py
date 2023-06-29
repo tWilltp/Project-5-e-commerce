@@ -32,3 +32,12 @@ def locations_detail(request):
 def FAQs(request):
     """ returns gym locations page"""
     return render(request, "home/FAQs.html")
+
+
+def payment_option(request):
+    """ offers different payment options """
+    offers = PaymentOption.objects.all()
+    context = {
+        'offers': offers
+    }
+    return render(request, context)
