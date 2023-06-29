@@ -18,26 +18,24 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
+<div class="container gym-locations">
     <div class="row">
         <div class="col-lg-3 col-sm-6 text-center">
-            {% for locations in locations %}
             <a href="{% url 'locations_detail' %}">
                 <h2 class="logo">
                     <strong>Lift, Life, Long</strong>
                 </h2>
                 <h4>
-                    {{ locations.location }}
+                    Location
                 </h4>
                 <p>
-                    {{ locations.address }} <br>
-                    {{ locations.postcode }}
+                    full address and <br>
+                    postcode
                 </p>
                 <p>
-                    {{ locations.phone_number }}
+                    1234567890
                 </p>
             </a>
-            {% endfor %}
         </div>
         <div class="col-lg-3 col-sm-6 text-center">
             <a href="{% url 'locations_detail' %}">

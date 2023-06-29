@@ -41,3 +41,8 @@ def payment_option(request):
         'offers': offers
     }
     return render(request, context)
+
+
+def classes(request):
+    """ returns gym locations page"""
+    return render(request, "home/classes.html")

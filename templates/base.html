@@ -66,7 +66,7 @@
                         {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
                         <li class="nav-links">
-                            <a href="#">
+                            <a href="/admin">
                                 Gym Management
                             </a>
                         </li>
@@ -98,11 +98,6 @@
                                 Social Blog
                             </a>
                         </li>
-                        <li class="nav-links">
-                            <a class="nav-links-active" href="#">
-                                Live, Life, Long, Lifestyle
-                            </a>
-                        </li>
                     </ul>
                 </nav>
             </div>
@@ -123,7 +118,7 @@
                         </a>
                         {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
-                        <a class="dropdown-links" href="#">
+                        <a class="dropdown-links" href="/admin">
                             Gym Management
                         </a>
                         {% endif %}
@@ -143,9 +138,6 @@
                         {% endif %}
                         <a class="dropdown-links" href="#">
                             Social Blog
-                        </a>
-                        <a class="dropdown-links" href="#">
-                            Live, Life, Long, Lifestyle
                         </a>
                     </div>
                 </div>
@@ -200,10 +192,12 @@
                 </div>
                 <div class="col-lg-4 col-sm-12 text-center">
                     <div class="icon">
-                        <a href="#"></a>
+                        <a href="{% url 'classes' %}"></a>
                     </div>
                     <h2>See our Classes</h2>
-                    <div class="btn btn-lg">Classes</div>
+                    <a href="{% url 'classes' %}">
+                        <div class="btn btn-lg">Classes</div>
+                    </a>
                 </div>
             </div>
         </div>

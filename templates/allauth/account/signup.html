@@ -30,13 +30,19 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            {% for offers in offers %}
-            <select class="form-control">
-                <option>{{ offers }}</option>
-                <option>{{ offers }}</option>
-                <option>{{ offers }}</option>
-            </select>
-            {% endfor %}
+            <body>
+                <h1>Purchase your new kit</h1>
+                <!-- Paste your embed code script here. -->
+                <script
+                  async
+                  src="https://js.stripe.com/v3/buy-button.js">
+                </script>
+                <stripe-buy-button
+                  buy-button-id='{{BUY_BUTTON_ID}}'
+                  publishable-key="pk_test_51NOGOUI2Zfyzau0l8ZGFhfJfMUqcpyMyBIK7bAbcNGiGsYRfZJqmOYvOTyuItHj40M7fhRMKASr5fYRpthOyC2vQ004yBAXnMl"
+                >
+                </stripe-buy-button>
+              </body>
         </div>
     </div>
 </div>
