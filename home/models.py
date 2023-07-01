@@ -47,6 +47,7 @@ class EquipmentFacilities(models.Model):
 
 
 class GymLocation(models.Model):
+    slug = models.SlugField(max_length=200, unique=True, default=True)
     location = models.TextField(max_length=20, unique=True)
     address = models.CharField(max_length=100, unique=True)
     postcode = models.CharField(max_length=7, default=True, unique=True)

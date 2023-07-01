@@ -7,7 +7,9 @@ body {
     background-size: cover;
 }
 
-/* base header styles */
+/* base styles */
+
+/* header styles */
 
 .header {
     background: #eae7de;
@@ -52,6 +54,14 @@ body {
 
 /* drop down menu nav links for smaller screen sizes */
 
+.dropdown-nav {
+    
+}
+
+.dropdown-nav-btn {
+    
+}
+
 .dropdown-menu {
     float: right;
 }
@@ -60,30 +70,6 @@ body {
     list-style-type: none;
     display: block;
 }
-
-/* index page styles */
-
-.index-header {
-    background-color: lightgray;
-    height: 300px;
-    width: 100%;
-    margin: 10px;
-}
-
-.index-page-about {
-    float: right;
-}
-
-.join-now {
-    background-color: #eae7de;
-    border-radius: 5px;
-}
-
-.join-now-anchor {
-    margin: 5px;
-}
-
-/* why join us section */
 
 /* footer styles */
 
@@ -114,8 +100,120 @@ body {
     display: inline-block;
 }
 
+/* index page styles */
+
+/* header styles */
+
+.index-header {
+    background-color: lightgray;
+    height: 300px;
+    width: 100%;
+    margin: 10px;
+}
+
+.index-page-about {
+    float: right;
+}
+
+.join-now {
+    background-color: #eae7de;
+    border-radius: 5px;
+}
+
+.join-now-anchor {
+    margin: 5px;
+}
+
+.welcome-message {
+
+}
+
+.welcome-message-p {
+
+}
+
+/* about us section */
+
+.index-page-about-title {
+
+}
+
+.index-page-about-p {
+
+}
+
+/* why join us section */
+
+.why-join-us {
+
+}
+
+.why-join-title {
+
+}
+
+.reasons-list-1 {
+
+}
+
+.reasons-list-2 {
+
+}
+
+.reason {
+
+}
+
 /* locations page styles */
+
+/* header styles */
+
+.gym-loc-header {
+
+}
+
+/* main content */
 
 .gym-locations {
     text-emphasis-color: black;
 }
+
+.gym-loc-row-1 {
+
+}
+
+.gym-loc-row-2 {
+
+}
+
+.indiv-gym-loc {
+
+}
+
+/* FAQs page styles */
+
+/* header styles */
+
+.FAQs-header {
+
+}
+
+/* main content */
+
+.FAQ-div {
+
+}
+
+.FAQ-btn {
+
+}
+
+.FAQ-text {
+
+}
+
+/* join now page styles */
+
+/* login page styles */
+
+/* social blog page styles */
