@@ -10,23 +10,32 @@ def index(request):
 
 def LocationsView(request):
     """ returns gym locations page"""
-    locations = GymLocation.objects.all()
+    location = GymLocation.objects.all()
     context = {
-        'locations': locations,
+        'location': location,
     }
     return render(request, "home/locations.html", context)
 
 
-def locations_detail(request):
-    """ returns specific gym location page"""
-    model = GymLocation
-    
-    return render(request, "home/locations_detail.html")
+class locations_detail(View):
 
+    def get(self, request, slug):
+        queryset = GymLocation.objects.all()
+        location = get_object_or_404(queryset, slug=slug)
+        address = get_object_or_404(queryset, slug=slug)
+        postcode = get_object_or_404(queryset, slug=slug)
+        phone_number = get_object_or_404(queryset, slug=slug)
 
-# class LoactionsDetail(View):
-#     """ returns specific gym on individual page """
-#     return render(request, "home/locations_detail.html")
+        return render(
+            request,
+            "locations_detail.html",
+            {
+                "location": location,
+                "address": address,
+                "postcode": postcode,
+                "phone_number": phone_number,
+            },
+        )
 
 
 def FAQs(request):
