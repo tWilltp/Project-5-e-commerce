@@ -28,7 +28,7 @@ class locations_detail(View):
 
         return render(
             request,
-            "locations_detail.html",
+            "home/locations_detail.html",
             {
                 "location": location,
                 "address": address,
