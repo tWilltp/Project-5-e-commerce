@@ -6,7 +6,7 @@ from django_summernote.admin import SummernoteModelAdmin
 @admin.register(User)
 class UserId(SummernoteModelAdmin):
 
-    list_display = ('name', 'email', 'user_id', 'payment_option')
+    list_display = ('name', 'email', 'user_id')
 
 
 @admin.register(GymLocation)
