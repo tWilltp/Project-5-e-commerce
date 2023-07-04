@@ -36,25 +36,21 @@ class Membership(models.Model):
         verbose_name_plural = 'Membership'
 
 
-class BuyMembership(models.Model):
-    membership = models.ForeignKey(
-        Membership, on_delete=models.CASCADE, related_name="BuyMembership")
-    subscription = models.ForeignKey(
-        PaymentOption, on_delete=models.CASCADE, related_name="subscription")
-    membership_total = models.DecimalField(
-        max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
-
-    def __str__(self):
-
-        return self.order_number  # change to template literal
+# class BuyMembership(models.Model):
+#     membership = models.ForeignKey(
+#         Membership, on_delete=models.CASCADE, related_name="BuyMembership")
+#     subscription = models.ForeignKey(
+#         PaymentOption, on_delete=models.CASCADE, related_name="subscription")
+#     membership_total = models.DecimalField(
+#         max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
 
 
 class User(models.Model):
     name = models.TextField(max_length=20, unique=True)
     email = models.EmailField(max_length=30, unique=True)
     user_id = models.CharField(max_length=20, unique=True, null=True)
-    membership = models.ForeignKey(
-        Membership, on_delete=models.CASCADE, related_name="Membership")
+    # membership = models.ForeignKey(
+    #     Membership, on_delete=models.CASCADE, related_name="Membership")
 
     class Meta:
         verbose_name_plural = 'User'
