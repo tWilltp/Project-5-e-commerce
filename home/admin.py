@@ -1,6 +1,19 @@
 from django.contrib import admin
-from .models import User, GymLocation, GymClass, Attendance, EquipmentFacilities, PaymentOption
+from .models import User, GymLocation, GymClass, Attendance, EquipmentFacilities, PaymentOption, Membership
 from django_summernote.admin import SummernoteModelAdmin
+
+
+@admin.register(PaymentOption)
+class PaymentOption(SummernoteModelAdmin):
+
+    list_display = ('price', 'annual', 'monthly', 'day_pass')
+
+
+@admin.register(Membership)
+class Membership(SummernoteModelAdmin):
+
+    list_display = (
+        'order_number', 'Full_name', 'email', 'phone_number', 'date', 'payment_option')
 
 
 @admin.register(User)
@@ -32,9 +45,3 @@ class ClassAttendance(SummernoteModelAdmin):
 class Equip_Facil(SummernoteModelAdmin):
 
     list_display = ('free_parking', 'changing_rooms', 'lockers', 'sunbeds', 'sauna', 'pool', 'personal_trainer')
-
-
-@admin.register(PaymentOption)
-class Subscriptions(SummernoteModelAdmin):
-
-    list_display = ('annual', 'monthly', 'day_pass')
