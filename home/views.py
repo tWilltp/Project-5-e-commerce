@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import GymLocation
+from .forms import MembershipForm
 
 
 def index(request):
@@ -55,3 +56,14 @@ def payment_option(request):
 def classes(request):
     """ returns gym locations page"""
     return render(request, "home/classes.html")
+
+
+def OrderMembership(request):
+    """ renders subscription options """
+    membership_form = MembershipForm()
+    template = "home/membership.html"
+    context = {
+        'membership_form': membership_form,
+    }
+
+    return render(request, template, context)

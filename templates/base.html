@@ -63,6 +63,11 @@
                                 FAQ's
                             </a>
                         </li>
+                        <li class="nav-links">
+                            <a class="nav-links-active" href="{% url 'membership' %}">
+                                Membership
+                            </a>
+                        </li>
                         {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
                         <li class="nav-links">

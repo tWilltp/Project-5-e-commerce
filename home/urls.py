@@ -9,4 +9,5 @@ urlpatterns = [
         ), name='locations_detail'),
     path('home/FAQs.html/', views.FAQs, name="FAQs"),
     path('home/classes.html/', views.classes, name="classes"),
+    path('home/membership.html', views.OrderMembership, name='membership'),
 ]

@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>membership</h1>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <form action="{% url 'membership' %}" method="POST" id="payment-form">
+                <fieldset>
+                    {% csrf_token %}
+                    {{ membership_form.full_name|crispy }}
+                    {{ membership_form.email|crispy }}
+                    {{ membership_form.phone_number|crispy }}
+                    {{ membership_form.payment_option|crispy }}
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
