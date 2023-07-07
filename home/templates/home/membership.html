@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load crispy_forms_field %}
 
 {% block page_header %}
 
@@ -21,10 +22,7 @@
             <form action="{% url 'membership' %}" method="POST" id="payment-form">
                 <fieldset>
                     {% csrf_token %}
-                    {{ membership_form.full_name|crispy }}
-                    {{ membership_form.email|crispy }}
-                    {{ membership_form.phone_number|crispy }}
-                    {{ membership_form.payment_option|crispy }}
+                    {{ membership_form | crispy }}
                 </fieldset>
             </form>
         </div>
