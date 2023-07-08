@@ -7,7 +7,7 @@ class MembershipForm(ModelForm):
     class Meta:
         model = Membership
         fields = ['full_name', 'email',
-                  'phone_number', 'payment_option']
+                  'phone_number', 'subscription']
 
     # def init(self, *args, *kwargs):
 

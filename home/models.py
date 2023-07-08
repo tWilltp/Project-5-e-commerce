@@ -21,8 +21,8 @@ class Membership(models.Model):
     email = models.CharField(max_length=250, null=False, blank=False)
     phone_number = models.CharField(max_length=20, null=False, blank=False)
     date = models.DateTimeField(auto_now_add=True)
-    payment_option = models.ForeignKey(
-        PaymentOption, on_delete=models.CASCADE, related_name="PaymentOption")
+    subscription = models.ForeignKey(
+        PaymentOption, on_delete=models.CASCADE, related_name="subscription", null=True)
 
     def generate_order_number(self):
 
@@ -58,7 +58,7 @@ class User(models.Model):
 
 class GymClass(models.Model):
     class_name = models.CharField(max_length=20, unique=True)
-    class_schedule = models.DateTimeField(auto_now_add=True)
+    class_schedule = models.CharField(max_length=20, null=True)
 
     class Meta:
         verbose_name_plural = 'GymClass'

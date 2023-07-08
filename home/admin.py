@@ -13,7 +13,7 @@ class PaymentOption(SummernoteModelAdmin):
 class Membership(SummernoteModelAdmin):
 
     list_display = (
-        'order_number', 'full_name', 'email', 'phone_number', 'date', 'payment_option')
+        'order_number', 'full_name', 'email', 'phone_number', 'date', 'subscription')
 
 
 @admin.register(User)
