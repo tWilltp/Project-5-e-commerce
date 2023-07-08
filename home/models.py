@@ -87,6 +87,8 @@ class GymLocation(models.Model):
         'EquipmentFacilities', on_delete=models.CASCADE, default=True, related_name="equip_facil")
     classes = models.ForeignKey(
         'GymClass', on_delete=models.CASCADE, default=True, related_name="classes")
+    class_schedule = models.ForeignKey(
+        'GymClass', on_delete=models.CASCADE, default=True, related_name="schedule")
 
     class Meta:
         verbose_name_plural = 'GymLocation'

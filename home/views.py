@@ -26,6 +26,8 @@ class locations_detail(View):
         address = get_object_or_404(queryset, slug=slug)
         postcode = get_object_or_404(queryset, slug=slug)
         phone_number = get_object_or_404(queryset, slug=slug)
+        classes = get_object_or_404(queryset, slug=slug)
+        class_schedule = get_object_or_404(queryset, slug=slug)
 
         return render(
             request,
@@ -35,6 +37,8 @@ class locations_detail(View):
                 "address": address,
                 "postcode": postcode,
                 "phone_number": phone_number,
+                "classes": classes,
+                "class_schedule": class_schedule,
             },
         )
 
@@ -62,21 +66,21 @@ def classes(request):
     return render(request, "home/classes.html", context)
 
 
-class classes_detail(View):
+# class classes_detail(View):
 
-    def get(self, request, slug):
-        queryset = GymClass.objects.all()
-        class_name = get_object_or_404(queryset)
-        schedule = get_object_or_404(queryset)
+#     def get(self, request, slug):
+#         queryset = GymClass.objects.all()
+#         class_name = get_object_or_404(queryset)
+#         schedule = get_object_or_404(queryset)
 
-        return render(
-            request,
-            "home/locations_detail.html",
-            {
-                "class_name": class_name,
-                "schedule": schedule,
-            },
-        )
+#         return render(
+#             request,
+#             "home/locations_detail.html",
+#             {
+#                 "class_name": class_name,
+#                 "schedule": schedule,
+#             },
+#         )
 
 
 def OrderMembership(request):
