@@ -10,7 +10,7 @@ def index(request):
 
 
 def equipment_and_facilities(request):
-    eq_fac = EquipmentFacilities.objects.all()
+    equip_facil = EquipmentFacilities.objects.all()
     context = {
         "equip_facil": equip_facil,
     }
@@ -99,7 +99,7 @@ def OrderMembership(request):
     template = "home/membership.html"
     context = {
         'membership_form': membership_form,
-        'stripe_publishable_key': 'pk_test_51NOGOUI2Zfyzau0l8ZGFhfJfMUqcpyMyBIK7bAbcNGiGsYRfZJqmOYvOTyuItHj40M7fhRMKASr5fYRpthOyC2vQ004yBAXnMl',
+        'stripe_public_key': 'pk_test_51NOGOUI2Zfyzau0l8ZGFhfJfMUqcpyMyBIK7bAbcNGiGsYRfZJqmOYvOTyuItHj40M7fhRMKASr5fYRpthOyC2vQ004yBAXnMl',
         'client_secret': 'test client secret',
     }
 
