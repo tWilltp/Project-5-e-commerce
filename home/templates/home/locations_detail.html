@@ -11,12 +11,17 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-12">
+        <div class="col-6">
             <h1>logo</h1>
             <h2>{{ location.location }}</h2>
             <p>{{ location.address }}</p>
             <p>{{ location.postcode }}</p>
             <p>{{ location.phone_number }}</p>
+        </div>
+        <div class="col-6">
+            <h1>Classes available at this gym</h1>
+            <p>{{ class_name }}</p>
+            <p>{{ schedule }}</p>
         </div>
     </div>
 </div>

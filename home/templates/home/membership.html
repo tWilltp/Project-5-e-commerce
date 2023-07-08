@@ -30,3 +30,11 @@
 </div>
 
 {% endblock %}
+
+{% block postloadjs %}
+
+    {{ block.super }}
+    {{ stripe_publishable_key|json_script:"id_stripe_publishable_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% home 'js/script.js' %}"></script>
+{% endblock %}

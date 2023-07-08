@@ -57,7 +57,7 @@ class User(models.Model):
 
 
 class GymClass(models.Model):
-    class_name = models.TextField(max_length=20, unique=True)
+    class_name = models.CharField(max_length=20, unique=True)
     class_schedule = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -79,7 +79,7 @@ class EquipmentFacilities(models.Model):
 
 class GymLocation(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
-    location = models.TextField(max_length=20, unique=True)
+    location = models.CharField(max_length=20, unique=True)
     address = models.CharField(max_length=100, unique=True)
     postcode = models.CharField(max_length=7, default=True, unique=True)
     phone_number = models.CharField(max_length=11, unique=True)

@@ -19,7 +19,7 @@ def LocationsView(request):
 
 
 class locations_detail(View):
-
+    """ returns individual gym location information """
     def get(self, request, slug):
         queryset = GymLocation.objects.all()
         location = get_object_or_404(queryset, slug=slug)
@@ -40,7 +40,7 @@ class locations_detail(View):
 
 
 def FAQs(request):
-    """ returns gym locations page"""
+    """ returns FAQs page"""
     return render(request, "home/FAQs.html")
 
 
@@ -54,8 +54,29 @@ def payment_option(request):
 
 
 def classes(request):
-    """ returns gym locations page"""
-    return render(request, "home/classes.html")
+    """ returns gym classes page"""
+    classes = GymClass.objects.all()
+    context = {
+        'classes': classes
+    }
+    return render(request, "home/classes.html", context)
+
+
+class classes_detail(View):
+
+    def get(self, request, slug):
+        queryset = GymClass.objects.all()
+        class_name = get_object_or_404(queryset)
+        schedule = get_object_or_404(queryset)
+
+        return render(
+            request,
+            "home/locations_detail.html",
+            {
+                "class_name": class_name,
+                "schedule": schedule,
+            },
+        )
 
 
 def OrderMembership(request):
@@ -64,6 +85,8 @@ def OrderMembership(request):
     template = "home/membership.html"
     context = {
         'membership_form': membership_form,
+        'stripe_publishable_key': 'pk_test_51NOGOUI2Zfyzau0l8ZGFhfJfMUqcpyMyBIK7bAbcNGiGsYRfZJqmOYvOTyuItHj40M7fhRMKASr5fYRpthOyC2vQ004yBAXnMl',
+        'client_secret': 'test client secret',
     }
 
     return render(request, template, context)
