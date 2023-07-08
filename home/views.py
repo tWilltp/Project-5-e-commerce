@@ -9,6 +9,14 @@ def index(request):
     return render(request, "home/index.html")
 
 
+def equipment_and_facilities(request):
+    eq_fac = EquipmentFacilities.objects.all()
+    context = {
+        "equip_facil": equip_facil,
+    }
+    return render(request, "home/equip_facil.html", context)
+
+
 def LocationsView(request):
     """ returns gym locations page"""
     location = GymLocation.objects.all()
@@ -28,6 +36,7 @@ class locations_detail(View):
         phone_number = get_object_or_404(queryset, slug=slug)
         classes = get_object_or_404(queryset, slug=slug)
         class_schedule = get_object_or_404(queryset, slug=slug)
+        equip_facil = get_object_or_404(queryset, slug=slug)
 
         return render(
             request,
@@ -39,6 +48,7 @@ class locations_detail(View):
                 "phone_number": phone_number,
                 "classes": classes,
                 "class_schedule": class_schedule,
+                "equip_facil": equip_facil,
             },
         )
 

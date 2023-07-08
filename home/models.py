@@ -65,13 +65,13 @@ class GymClass(models.Model):
 
 
 class EquipmentFacilities(models.Model):
-    free_parking = models.BooleanField()
-    changing_rooms = models.BooleanField()
-    lockers = models.BooleanField()
-    sunbeds = models.BooleanField()
-    sauna = models.BooleanField()
-    pool = models.BooleanField()
-    personal_trainer = models.BooleanField()
+    free_parking = models.CharField(max_length=20, null=True)
+    changing_rooms = models.CharField(max_length=20, null=True)
+    lockers = models.CharField(max_length=20, null=True)
+    sunbeds = models.CharField(max_length=20, null=True)
+    sauna = models.CharField(max_length=20, null=True)
+    pool = models.CharField(max_length=20, null=True)
+    personal_trainer = models.CharField(max_length=20, null=True)
 
     class Meta:
         verbose_name_plural = 'EquipmentFacilities'
