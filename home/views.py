@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
-from .models import GymLocation
+from .models import GymLocation, EquipmentFacilities
 from .forms import MembershipForm
 
 
@@ -9,12 +9,38 @@ def index(request):
     return render(request, "home/index.html")
 
 
-def equipment_and_facilities(request):
-    equip_facil = EquipmentFacilities.objects.all()
-    context = {
-        "equip_facil": equip_facil,
-    }
-    return render(request, "home/equip_facil.html", context)
+class equipment_and_facilities(View):
+    """ returns individual gym location information """
+    def get(self, request, slug):
+        queryset = GymLocation.objects.all()
+        free_parking = get_object_or_404(queryset, slug=slug)
+        changing_rooms = get_object_or_404(queryset, slug=slug)
+        lockers = get_object_or_404(queryset, slug=slug)
+        sunbeds = get_object_or_404(queryset, slug=slug)
+        sauna = get_object_or_404(queryset, slug=slug)
+        pool = get_object_or_404(queryset, slug=slug)
+        personal_trainer = get_object_or_404(queryset, slug=slug)
+
+        return render(
+            request,
+            "home/locations_detail.html",
+            {
+                "free_parking": free_parking,
+                "changing_rooms": changing_rooms,
+                "lockers": lockers,
+                "sunbeds": sunbeds,
+                "pool": pool,
+                "personal_trainer": personal_trainer,
+            },
+        )
+
+
+# def equipment_and_facilities(request):
+#     equip_facil = EquipmentFacilities.objects.all()
+#     context = {
+#         "equip_facil": equip_facil,
+#     }
+#     return render(request, "home/locations_detail.html", context)
 
 
 def LocationsView(request):
