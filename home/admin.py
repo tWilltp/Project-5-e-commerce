@@ -6,7 +6,7 @@ from django_summernote.admin import SummernoteModelAdmin
 @admin.register(PaymentOption)
 class PaymentOption(SummernoteModelAdmin):
 
-    list_display = ('price', 'annual', 'monthly', 'day_pass')
+    list_display = ('price', 'Annual', 'Monthly', 'Day Pass')
 
 
 @admin.register(Membership)
