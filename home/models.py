@@ -65,13 +65,8 @@ class GymClass(models.Model):
 
 
 class EquipmentFacilities(models.Model):
-    free_parking = models.CharField(max_length=20, null=True, blank=True)
-    changing_rooms = models.CharField(max_length=20, null=True, blank=True)
-    lockers = models.CharField(max_length=20, null=True, blank=True)
-    sunbeds = models.CharField(max_length=20, null=True, blank=True)
-    sauna = models.CharField(max_length=20, null=True, blank=True)
-    pool = models.CharField(max_length=20, null=True, blank=True)
-    personal_trainer = models.CharField(max_length=20, null=True, blank=True)
+    equipment_available = models.CharField(
+        max_length=20, null=True, unique=True)
 
     class Meta:
         verbose_name_plural = 'EquipmentFacilities'

@@ -44,4 +44,4 @@ class ClassAttendance(SummernoteModelAdmin):
 @admin.register(EquipmentFacilities)
 class Equip_Facil(SummernoteModelAdmin):
 
-    list_display = ('free_parking', 'changing_rooms', 'lockers', 'sunbeds', 'sauna', 'pool', 'personal_trainer')
+    list_display = ('equipment_available',)

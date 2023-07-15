@@ -9,38 +9,39 @@ def index(request):
     return render(request, "home/index.html")
 
 
-class equipment_and_facilities(View):
-    """ returns individual gym location information """
-    def get(self, request, slug):
-        queryset = GymLocation.objects.all()
-        free_parking = get_object_or_404(queryset, slug=slug)
-        changing_rooms = get_object_or_404(queryset, slug=slug)
-        lockers = get_object_or_404(queryset, slug=slug)
-        sunbeds = get_object_or_404(queryset, slug=slug)
-        sauna = get_object_or_404(queryset, slug=slug)
-        pool = get_object_or_404(queryset, slug=slug)
-        personal_trainer = get_object_or_404(queryset, slug=slug)
+# class equipment_facilities(View):
+#     """ returns individual gym location information """
+#     def get(self, request, slug):
+#         queryset = GymLocation.objects.all()
+#         free_parking = get_object_or_404(queryset, slug=slug)
+#         changing_rooms = get_object_or_404(queryset, slug=slug)
+#         lockers = get_object_or_404(queryset, slug=slug)
+#         sunbeds = get_object_or_404(queryset, slug=slug)
+#         sauna = get_object_or_404(queryset, slug=slug)
+#         pool = get_object_or_404(queryset, slug=slug)
+#         personal_trainer = get_object_or_404(queryset, slug=slug)
 
-        return render(
-            request,
-            "home/locations_detail.html",
-            {
-                "free_parking": free_parking,
-                "changing_rooms": changing_rooms,
-                "lockers": lockers,
-                "sunbeds": sunbeds,
-                "pool": pool,
-                "personal_trainer": personal_trainer,
-            },
-        )
+#         return render(
+#             request,
+#             "home/locations_detail.html",
+#             {
+#                 "free_parking": free_parking,
+#                 "changing_rooms": changing_rooms,
+#                 "lockers": lockers,
+#                 "sunbeds": sunbeds,
+#                 "pool": pool,
+#                 "personal_trainer": personal_trainer,
+#             },
+#         )
 
 
-# def equipment_and_facilities(request):
-#     equip_facil = EquipmentFacilities.objects.all()
-#     context = {
-#         "equip_facil": equip_facil,
-#     }
-#     return render(request, "home/locations_detail.html", context)
+def equipment_and_facilities(request):
+    """ returns gym equipment and facilities page"""
+    equipment_facilities = EquipmentFacilities.objects.all()
+    context = {
+        "equipment_facilities": equipment_facilities,
+    }
+    return render(request, "home/locations_detail.html", context)
 
 
 def LocationsView(request):
@@ -62,7 +63,7 @@ class locations_detail(View):
         phone_number = get_object_or_404(queryset, slug=slug)
         classes = get_object_or_404(queryset, slug=slug)
         class_schedule = get_object_or_404(queryset, slug=slug)
-        equip_facil = get_object_or_404(queryset, slug=slug)
+        equipment_facilities = get_object_or_404(queryset, slug=slug)
 
         return render(
             request,
@@ -74,7 +75,7 @@ class locations_detail(View):
                 "phone_number": phone_number,
                 "classes": classes,
                 "class_schedule": class_schedule,
-                "equip_facil": equip_facil,
+                "equipment_facilities": equipment_facilities,
             },
         )
 
@@ -100,23 +101,6 @@ def classes(request):
         'classes': classes
     }
     return render(request, "home/classes.html", context)
-
-
-# class classes_detail(View):
-
-#     def get(self, request, slug):
-#         queryset = GymClass.objects.all()
-#         class_name = get_object_or_404(queryset)
-#         schedule = get_object_or_404(queryset)
-
-#         return render(
-#             request,
-#             "home/locations_detail.html",
-#             {
-#                 "class_name": class_name,
-#                 "schedule": schedule,
-#             },
-#         )
 
 
 def OrderMembership(request):
