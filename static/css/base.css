@@ -279,6 +279,15 @@ body {
 
 /* login page styles */
 
+.login-title {
+    text-decoration: underline;
+    margin-bottom: 100px;
+}
+
+.login-form {
+    font-size: x-large;
+}
+
 /* lifestyle page styles */
 
 .lifestyle-header {
