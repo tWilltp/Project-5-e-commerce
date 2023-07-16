@@ -6,8 +6,8 @@
 
 <div class="container">
     <div class="row">
-        <div class="col">
-            <h1>membership</h1>
+        <div class="col-12 text-center membership-title">
+            <h1>Membership</h1>
         </div>
     </div>
 </div>
@@ -18,9 +18,9 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 membership-form">
             <form action="{% url 'membership' %}" method="POST" id="payment-form">
-                <fieldset>
+                <fieldset class="fieldset-input">
                     {% csrf_token %}
                     {{ membership_form | crispy }}
                 </fieldset>
@@ -35,7 +35,7 @@
                 <div id="card-element">
                   <!-- Elements will create form elements here -->
                 </div>
-                <button id="submit">Submit</button>
+                <button class="stripe-submit-btn" id="submit">Submit</button>
                 <div id="error-message">
                   <!-- Display error message to your customers here -->
                 </div>

@@ -275,6 +275,37 @@ body {
     border-radius: 10px;
 }
 
+/* membership page styles */
+
+.membership-title {
+    text-decoration: underline;
+    margin-bottom: 100px;
+}
+
+.membership-form {
+    font-size: x-large;
+}
+
+.fieldset-input {
+    border: 4px solid;
+    border-color: red;
+    border-radius: 10px;
+    background-color: #eae7de;
+    margin-bottom: 50px;
+}
+
+#payment-form {
+    font-size: x-large;
+}
+
+.stripe-submit-btn {
+    border: 4px solid;
+    border-color: red;
+    border-radius: 10px;
+    background-color: #eae7de;
+    margin: 10px;
+}
+
 /* join now page styles */
 
 .signup-title {
