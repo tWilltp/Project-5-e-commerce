@@ -171,37 +171,27 @@
     <footer class="footer">
         <div class="container">
             <div class="row footer-1">
-                <div class="col-lg-4 col-sm-6 text-center">
+                <div class="col-lg-4 col-sm-6 text-center footer-column-1">
                     <div class="icon">
                         <a href="#"></a>
                     </div>
                     <h2>Signup at one of our Gyms</h2>
-                    <div class="dropdown">
-                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                            aria-expanded="false">
+                    <div class="btn locations-btn">
+                        <a class="btn" href="{% url 'locations' %}" role="button" aria-expanded="false">
                             Locations
                         </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">gym1</a>
-                            <a class="dropdown-item" href="#">gym2</a>
-                            <a class="dropdown-item" href="#">gym3</a>
-                            <a class="dropdown-item" href="#">gym4</a>
-                            <a class="dropdown-item" href="#">gym5</a>
-                            <a class="dropdown-item" href="#">gym6</a>
-                            <a class="dropdown-item" href="#">gym7</a>
-                            <a class="dropdown-item" href="#">gym8</a>
-                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <div class="icon">
-                        <a href="#"></a>
-                    </div>
+                <div class="col-lg-4 col-sm-6 text-center footer-column-2">
                     <h2>5 STARS</h2>
-                    <p>stars icon here</p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
                     <p>our members all rate us 5 stars</p>
                 </div>
-                <div class="col-lg-4 col-sm-12 text-center">
+                <div class="col-lg-4 col-sm-12 text-center footer-column-3">
                     <div class="icon">
                         <a href="{% url 'classes' %}"></a>
                     </div>

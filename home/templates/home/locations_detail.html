@@ -3,30 +3,36 @@
 
 {% block page_header %}
 
-<h1>gym location detail</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center location-detail-header">
+            <h1>Your Gym's Information</h1>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
 
 {% block content %}
 
-<div class="container">
+<div class="container gym-info">
     <div class="row">
-        <div class="col-6">
-            <h1>logo</h1>
+        <div class="col-6 text-center">
+            <h1 class="gym-info-title">Lift, Life, Long</h1>
             <h2>{{ location.location }}</h2>
             <p>{{ location.address }}</p>
             <p>{{ location.postcode }}</p>
             <p>{{ location.phone_number }}</p>
         </div>
-        <div class="col-6">
-            <h1>Classes available at this gym</h1>
+        <div class="col-6 text-center">
+            <h1 class="gym-info-title">Classes available at this gym</h1>
             <p>{{ location.classes.class_name }}</p>
             <p>{{ location.classes.class_schedule }}</p>
         </div>
     </div>
     <div class="row">
         <div class="col-12 text-center">
-            <h1>Equipment and Facilities available at this Gym</h1>
+            <h1 class="gym-info-title">Equipment and Facilities available at this Gym</h1>
             <p>{{ location.equipment_facilities.equipment_available }}</p>
         </div>
     </div>

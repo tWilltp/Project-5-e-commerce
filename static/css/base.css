@@ -74,17 +74,35 @@ body {
 /* footer styles */
 
 .footer {
-    background: #093489;
+    background-color: black;
     list-style-type: none;
     margin-bottom: 0px;
 }
 
 .footer-1 {
     background: #eae7de;
+    height: 175px;
+}
+
+.footer-column-1 {
+    background-color: red;
+}
+
+.footer-column-2 {
+
+}
+
+.footer-column-3 {
+    background-color: red;
 }
 
 .footer-2 {
-    background: #3d6e91;
+    background-color: lightgray;
+    height: 175px;
+}
+
+.locations-btn {
+    background-color: lightgray;
 }
 
 .social-list {
@@ -109,7 +127,7 @@ body {
     height: 300px;
     width: 100%;
     margin: 0px;
-    
+    text-decoration: underline;
 }
 
 .join-now {
@@ -150,7 +168,6 @@ body {
 
 .why-join-title {
     margin: 10px;
-    background-color: red;
 }
 
 .reasons-list-1 {
@@ -175,20 +192,41 @@ body {
 
 .gym-loc-header {
     margin-bottom: 100px;
+    text-decoration: underline;
 }
 
 /* main content */
 
 .gym-locations {
-    text-emphasis-color: black;
+    
 }
 
 .gym-loc-row {
-
+    text-emphasis-color: red;
 }
 
 .indiv-gym-loc {
-    background-color: #437341;
+    border: 4px solid;
+    border-color: red;
+    border-radius: 10px;
+    background: #eae7de;
+}
+
+/* location detail page styles */
+
+.location-detail-header {
+    width: 100%;
+    margin-bottom: 100px;
+    text-decoration: underline;
+}
+
+.gym-info-title {
+    
+}
+
+.gym-info {
+    font-size: x-large;
+    font-weight: 600;
 }
 
 /* FAQs page styles */
@@ -196,7 +234,9 @@ body {
 /* header styles */
 
 .FAQs-header {
-
+    text-decoration: underline;
+    width: 100%;
+    margin-bottom: 100px;
 }
 
 /* main content */
@@ -210,7 +250,9 @@ body {
 }
 
 .FAQ-text {
-
+    border: 4px solid;
+    border-color: red;
+    border-radius: 10px;
 }
 
 /* join now page styles */
