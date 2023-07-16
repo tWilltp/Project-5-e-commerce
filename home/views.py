@@ -9,32 +9,6 @@ def index(request):
     return render(request, "home/index.html")
 
 
-# class equipment_facilities(View):
-#     """ returns individual gym location information """
-#     def get(self, request, slug):
-#         queryset = GymLocation.objects.all()
-#         free_parking = get_object_or_404(queryset, slug=slug)
-#         changing_rooms = get_object_or_404(queryset, slug=slug)
-#         lockers = get_object_or_404(queryset, slug=slug)
-#         sunbeds = get_object_or_404(queryset, slug=slug)
-#         sauna = get_object_or_404(queryset, slug=slug)
-#         pool = get_object_or_404(queryset, slug=slug)
-#         personal_trainer = get_object_or_404(queryset, slug=slug)
-
-#         return render(
-#             request,
-#             "home/locations_detail.html",
-#             {
-#                 "free_parking": free_parking,
-#                 "changing_rooms": changing_rooms,
-#                 "lockers": lockers,
-#                 "sunbeds": sunbeds,
-#                 "pool": pool,
-#                 "personal_trainer": personal_trainer,
-#             },
-#         )
-
-
 def equipment_and_facilities(request):
     """ returns gym equipment and facilities page"""
     equipment_facilities = EquipmentFacilities.objects.all()

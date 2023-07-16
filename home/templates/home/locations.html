@@ -19,7 +19,7 @@
 
 {% block content %}
 <div class="container gym-locations">
-    <div class="row gym-loc-row-1">
+    <div class="row gym-loc-row">
         {% for locations in location %}
         <div class="col-lg-3 col-sm-6 text-center indiv-gym-loc">
             <a href="{% url 'locations_detail' locations.slug %}">

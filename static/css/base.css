@@ -110,11 +110,13 @@ body {
     height: 300px;
     width: 100%;
     margin: 0px;
+    
 }
 
 .join-now {
     background-color: #eae7de;
     border-radius: 5px;
+    margin: 100px;
 }
 
 .join-now-anchor {
@@ -122,11 +124,11 @@ body {
 }
 
 .welcome-message {
-
+    
 }
 
 .welcome-message-p {
-
+    background-color: red;
 }
 
 /* about us section */
@@ -134,17 +136,17 @@ body {
 .index-page-about-title {
     float: right;
     margin: 20px;
+    background-color: red;
 }
 
 .index-page-about-p {
-
+    background-color: yellow;
 }
 
 /* why join us section */
 
 .why-join-us {
-    margin-left: 0px;
-    padding-left: opx;
+
 }
 
 .why-join-title {
@@ -174,7 +176,7 @@ body {
 /* header styles */
 
 .gym-loc-header {
-
+    margin-bottom: 100px;
 }
 
 /* main content */
@@ -183,16 +185,12 @@ body {
     text-emphasis-color: black;
 }
 
-.gym-loc-row-1 {
-
-}
-
-.gym-loc-row-2 {
+.gym-loc-row {
 
 }
 
 .indiv-gym-loc {
-
+    background-color: #437341;
 }
 
 /* FAQs page styles */

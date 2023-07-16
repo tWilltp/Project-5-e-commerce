@@ -6,15 +6,19 @@
 <!-- welcome message and join now button -->
 
 <div class="container h-100 index-header">
-    <div class="row h-100">
+    <div class="row">
         <div class="col-lg-2 col-sm-4 join-now my-5">
-            <h4 class="btn btn-lg rounded-0 text-uppercase py-3">
+            <h4 class="btn btn-lg rounded-0 text-uppercase">
                 <a class="join-now-anchor" href="{% url 'account_signup' %}">
                     Join Now
                 </a>
             </h4>
         </div>
-        <div class="col-lg-10 col-sm-12 text-center welcome-message">
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center welcome-message">
             <h1>
                 Welcome to <br> Lift, Life, Long
             </h1>
@@ -45,7 +49,7 @@
         </div>
     </div>
 </div>
-<div class="container-fluid index-page-about-p">
+<div class="container-fluid">
     <div class="row">
         <div class="col-6">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sequi tempora perferendis
@@ -58,12 +62,13 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-6">
+        <div class="col-6 index-page-about-p">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sequi tempora perferendis
                 rerum aliquam eligendi quas impedit itaque iusto, tenetur modi mollitia illum? Quis omnis
                 reiciendis optio beatae sunt nesciunt! Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Corporis perspiciatis eius ipsum deleniti aliquam atque vel optio fugit quidem illo. Ipsum
                 dignissimos iste hic sunt eos veniam dolores beatae porro.
+                <br><br><br><br><br><br>
             </p>
         </div>
     </div>
