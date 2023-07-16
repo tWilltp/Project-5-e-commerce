@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background-color: white;
+    background-color: lightgray;
     background-size: cover;
 }
 
@@ -12,8 +12,7 @@ body {
 /* header styles */
 
 .header {
-    background: url('media/images/eddie-hall-hero.webp');
-    /* background-color: #eae7de; */
+    background: url('/media/images/eddie-hall-hero.webp');
     height: 500px;
 }
 
@@ -21,7 +20,7 @@ body {
 
 .logo-base {
     width: fit-content;
-    color: black;
+    color: red;
     margin: 20px;
 }
 
@@ -34,12 +33,12 @@ body {
 }
 
 .nav-items {
+    color: red;
     display: inline-block;
     margin-top: 30px;
 }
 
 .nav-links {
-    color: black;
     border-radius: 3px;
     padding: 5px;
     margin-right: 15px;
@@ -128,7 +127,7 @@ body {
 }
 
 .welcome-message-p {
-    background-color: red;
+    
 }
 
 /* about us section */
@@ -150,6 +149,7 @@ body {
 }
 
 .why-join-title {
+    margin: 10px;
     background-color: red;
 }
 
@@ -163,8 +163,6 @@ body {
 
 .reason {
     margin: 0px;
-    background-color: gray;
-    opacity: 1.0;
 }
 
 .reason p {
