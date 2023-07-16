@@ -263,10 +263,11 @@ body {
 
 .FAQ-div {
     margin: 10px;
+    font-size: large;
 }
 
 .FAQ-btn {
-
+    font-size: large;
 }
 
 .FAQ-text {
