@@ -277,6 +277,22 @@ body {
 
 /* join now page styles */
 
+.signup-title {
+    text-decoration: underline;
+    margin-bottom: 100px;
+}
+
+#signup_form {
+    font-size: x-large;
+}
+
+.sign-in-btn {
+    border: 4px solid;
+    border-color: red;
+    border-radius: 10px;
+    background-color: #eae7de;
+}
+
 /* login page styles */
 
 .login-title {
