@@ -77,6 +77,11 @@ def classes(request):
     return render(request, "home/classes.html", context)
 
 
+def lifestyle(request):
+    """ returns lifestyle page"""
+    return render(request, "home/lifestyle.html")
+
+
 def OrderMembership(request):
     """ renders subscription options """
     membership_form = MembershipForm()

@@ -33,20 +33,25 @@ body {
 }
 
 .nav-items {
-    color: red;
     display: inline-block;
     margin-top: 30px;
+    background-color: #eae7de;
+    opacity: 1;
+    border-radius: 10px;
 }
 
 .nav-links {
+    color: red;
+    font-size: large;
     border-radius: 3px;
     padding: 5px;
     margin-right: 15px;
     display: inline-block;
+    text-decoration: underline;
 }
 
 .nav-links-active:hover {
-    background: gray;
+    background: red;
     padding: 5px;
     border-radius: 3px;
     transition: .5s;
@@ -108,6 +113,11 @@ body {
 .social-list {
     display: inline-block;
     margin-top: 30px;
+    margin: 50px;
+}
+
+.social-list-a {
+    padding: 10px;
 }
 
 .social-links {
@@ -116,6 +126,10 @@ body {
     padding: 5px;
     margin-right: 15px;
     display: inline-block;
+}
+
+.social-page {
+    margin-top: 30px;
 }
 
 /* index page styles */
@@ -127,7 +141,6 @@ body {
     height: 300px;
     width: 100%;
     margin: 0px;
-    text-decoration: underline;
 }
 
 .join-now {
@@ -141,11 +154,15 @@ body {
 }
 
 .welcome-message {
-    
+
+}
+
+.welcome-title {
+    text-decoration: underline;
 }
 
 .welcome-message-p {
-    
+    font-size: x-large;
 }
 
 /* about us section */
@@ -171,7 +188,7 @@ body {
 }
 
 .reasons-list-1 {
-   
+    
 }
 
 .reasons-list-2 {
@@ -179,11 +196,14 @@ body {
 }
 
 .reason {
-    margin: 0px;
+    border: 4px solid;
+    border-color: red;
+    border-radius: 10px;
+    background: #eae7de;
 }
 
-.reason p {
-    
+.reason-content {
+    padding: 5px;
 }
 
 /* locations page styles */
@@ -242,7 +262,7 @@ body {
 /* main content */
 
 .FAQ-div {
-
+    margin: 10px;
 }
 
 .FAQ-btn {
@@ -259,4 +279,12 @@ body {
 
 /* login page styles */
 
-/* social blog page styles */
+/* lifestyle page styles */
+
+.lifestyle-header {
+    text-decoration: underline;
+}
+
+.lifestyle-links {
+
+}
