@@ -1,7 +1,9 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
-from .models import GymLocation, EquipmentFacilities
+from .models import GymLocation, EquipmentFacilities, PaymentOption
 from .forms import MembershipForm
+from django.conf import settings
+import stripe
 
 
 def index(request):
@@ -83,13 +85,22 @@ def lifestyle(request):
 
 
 def OrderMembership(request):
+    stripe_public_key = settings.STRIPE_PUBLIC_KEY
+    stripe_secret_key = settings.STRIPE_SECRET_KEY
+    stripe.api_key = stripe_secret_key
+    stripe_total = int('26')*100
+    intent = stripe.PaymentIntent.create(
+        amount=stripe_total,
+        currency=settings.STRIPE_CURRENCY,
+    )
+
     """ renders subscription options """
     membership_form = MembershipForm()
     template = "home/membership.html"
     context = {
         'membership_form': membership_form,
-        'stripe_public_key': 'pk_test_51NOGOUI2Zfyzau0l8ZGFhfJfMUqcpyMyBIK7bAbcNGiGsYRfZJqmOYvOTyuItHj40M7fhRMKASr5fYRpthOyC2vQ004yBAXnMl',
-        'client_secret': 'test client secret',
+        'stripe_public_key': stripe_public_key,
+        'client_secret': intent.client_secret,
     }
 
     return render(request, template, context)
