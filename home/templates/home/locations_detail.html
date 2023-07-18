@@ -17,21 +17,21 @@
 
 <div class="container gym-info">
     <div class="row">
-        <div class="col-6 text-center">
+        <div class="col-6 text-center gym-info-specific">
             <h1 class="gym-info-title">Lift, Life, Long</h1>
             <h2>{{ location.location }}</h2>
             <p>{{ location.address }}</p>
             <p>{{ location.postcode }}</p>
             <p>{{ location.phone_number }}</p>
         </div>
-        <div class="col-6 text-center">
+        <div class="col-6 text-center gym-info-classes">
             <h1 class="gym-info-title">Classes available at this gym</h1>
             <p>{{ location.classes.class_name }}</p>
             <p>{{ location.classes.class_schedule }}</p>
         </div>
     </div>
     <div class="row">
-        <div class="col-12 text-center">
+        <div class="col-12 text-center gym-info-equipment">
             <h1 class="gym-info-title">Equipment and Facilities available at this Gym</h1>
             <p>{{ location.equipment_facilities.equipment_available }}</p>
         </div>

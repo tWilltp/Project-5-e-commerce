@@ -167,14 +167,26 @@ body {
 
 /* about us section */
 
-.index-page-about-title {
-    float: right;
-    margin: 20px;
+.title-row {
     background-color: red;
 }
 
-.index-page-about-p {
-    background-color: yellow;
+.index-page-about-title {
+    float: right;
+    margin: 20px;
+}
+
+.image-1 {
+    background: url('/media/images/c-bum.jpg') no-repeat center center;
+    background-size: cover;
+    height: 500px;
+}
+
+.image-2 {
+    background: url('/media/images/arnold.jpg') no-repeat center center;
+    background-size: cover;
+    height: 500px;
+    width: 600px;
 }
 
 /* why join us section */
@@ -247,6 +259,27 @@ body {
 .gym-info {
     font-size: x-large;
     font-weight: 600;
+}
+
+.gym-info-specific {
+    border: 4px solid;
+    border-color: red;
+    border-radius: 10px;
+    background: #eae7de;
+}
+
+.gym-info-classes {
+    border: 4px solid;
+    border-color: red;
+    border-radius: 10px;
+    background: #eae7de;
+}
+
+.gym-info-equipment {
+    border: 4px solid;
+    border-color: red;
+    border-radius: 10px;
+    background: #eae7de;
 }
 
 /* FAQs page styles */
