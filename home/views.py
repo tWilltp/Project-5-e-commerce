@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
-from .models import GymLocation, EquipmentFacilities, PaymentOption
+from .models import GymLocation, EquipmentFacilities, PaymentOption, GymClass
 from .forms import MembershipForm
 from django.conf import settings
 import stripe
@@ -12,7 +12,7 @@ def index(request):
 
 
 def equipment_and_facilities(request):
-    """ returns gym equipment and facilities page"""
+    """ returns gym equipment and facilities on locations detail page"""
     equipment_facilities = EquipmentFacilities.objects.all()
     context = {
         "equipment_facilities": equipment_facilities,
