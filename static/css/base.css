@@ -81,6 +81,7 @@ body {
 .footer {
     background-color: black;
     list-style-type: none;
+    margin-top: 30px;
     margin-bottom: 0px;
 }
 
@@ -94,16 +95,21 @@ body {
 }
 
 .footer-column-2 {
-
+    background: #eae7de;
 }
 
 .footer-column-3 {
     background-color: red;
 }
 
+.footer-2-container {
+
+}
+
 .footer-2 {
     background-color: lightgray;
     height: 175px;
+    margin-top: 10px;
 }
 
 .locations-btn {
