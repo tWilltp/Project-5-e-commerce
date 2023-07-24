@@ -375,6 +375,21 @@ body {
     font-size: x-large;
 }
 
+/* logout page styles */
+
+.sign-out-title {
+    text-decoration: underline;
+    margin-bottom: 100px;
+}
+
+.sign-out-form {
+    font-size: x-large;
+    border: 4px solid;
+    border-color: red;
+    border-radius: 10px;
+    background-color: #eae7de;
+}
+
 /* lifestyle page styles */
 
 .lifestyle-header {
