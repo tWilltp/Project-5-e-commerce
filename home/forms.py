@@ -9,22 +9,22 @@ class MembershipForm(ModelForm):
         fields = ['full_name', 'email',
                   'phone_number', 'subscription']
 
-    # def init(self, *args, *kwargs):
+    def init(self, *args, **kwargs):
 
-    #     super().__init__(*args, *kwargs)
-    #     placeholders = {
-    #         'full_name': 'Full Name',
-    #         'email': 'Email',
-    #         'phone_number': 'Phone Number',
-    #         'payment_option': 'subscription',
-    #     }
+        super().__init__(*args, **kwargs)
+        placeholders = {
+            'full_name': 'Full Name',
+            'email': 'Email',
+            'phone_number': 'Phone Number',
+            'payment_option': 'subscription',
+        }
 
-    # self.fields['full_name'].widget.attrs['autofocus'] = True
-    # for field in self.fields:
-    #     if self.fields[field].required:
-    #         placeholder = f'{placeholders[fields]} *'
-    #     else:
-    #         placeholder = placeholders[field]
-    #     self.fields[field].widget.attrs['placeholder'] = placeholder
-    #     self.fields[field].widget.attrs['class'] = 'stripe-style-input'
-    #     self.fields[field].label = False
+        self.fields['full_name'].widget.attrs['autofocus'] = True
+        for field in self.fields:
+            if self.fields[field].required:
+                placeholder = f'{placeholders[fields]} *'
+            else:
+                placeholder = placeholders[field]
+            self.fields[field].widget.attrs['placeholder'] = placeholder
+            self.fields[field].widget.attrs['class'] = 'stripe-style-input'
+            self.fields[field].label = False
