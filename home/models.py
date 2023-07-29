@@ -5,11 +5,8 @@ from django.contrib.auth.models import User
 
 
 class PaymentOption(models.Model):
-    price = models.DecimalField(
-        max_digits=6, decimal_places=2, null=True, blank=True)
-    annual = models.BooleanField(default=False, name="Annual")
-    monthly = models.BooleanField(default=False, name="Monthly")
-    day_pass = models.BooleanField(default=False, name="Day Pass")
+    monthly = models.DecimalField(
+        max_digits=6, decimal_places=2, null=True, blank=True, name="Monthly")
 
     class Meta:
         verbose_name_plural = 'PaymentOption'
