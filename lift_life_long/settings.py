@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-tjn&i3b)^tahp^zsq))2ukutj5(rv6l-l#4)d_304-^$g@71#8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://project-5-e-commerce-53c4227d4bc6.herokuapp.com/', 'localhost', '8000-twilltp-project5ecommer-3zxyewgjl9x.ws-eu102.gitpod.io']
+ALLOWED_HOSTS = ['project-5-e-commerce-53c4227d4bc6.herokuapp.com', 'localhost', '8000-twilltp-project5ecommer-3zxyewgjl9x.ws-eu102.gitpod.io']
 
 
 # Application definition
