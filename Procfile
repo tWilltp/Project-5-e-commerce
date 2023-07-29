@@ -1,0 +1,1 @@
+web: gunicorn lift_life_long.wsgi:application

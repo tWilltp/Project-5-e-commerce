@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-tjn&i3b)^tahp^zsq))2ukutj5(rv6l-l#4)d_304-^$g@71#8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-twilltp-project5ecommer-3zxyewgjl9x.ws-eu102.gitpod.io']
+ALLOWED_HOSTS = ['https://project-5-e-commerce-53c4227d4bc6.herokuapp.com/', 'localhost', '8000-twilltp-project5ecommer-3zxyewgjl9x.ws-eu102.gitpod.io']
 
 
 # Application definition
@@ -108,16 +108,16 @@ WSGI_APPLICATION = 'lift_life_long.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
 # DATABASES = {
-#     'default': dj_database_url.parse('postgres://ljoglbtc:qK8BJ1t7vKu6a7_zEh-LTVMDpxLZw8sL@kandula.db.elephantsql.com/ljoglbtc')
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
 # }
+
+DATABASES = {
+    'default': dj_database_url.parse('postgres://ljoglbtc:qK8BJ1t7vKu6a7_zEh-LTVMDpxLZw8sL@kandula.db.elephantsql.com/ljoglbtc')
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
