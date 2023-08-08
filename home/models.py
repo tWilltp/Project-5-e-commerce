@@ -64,8 +64,10 @@ class GymLocation(models.Model):
     address = models.CharField(max_length=100, unique=True)
     postcode = models.CharField(max_length=7, default=True, unique=True)
     phone_number = models.CharField(max_length=11, unique=True)
-    equipment_facilities = models.ForeignKey(
-        'EquipmentFacilities', on_delete=models.CASCADE, default=True, related_name="equip_facil")
+    equipment_facilities_obj1 = models.ForeignKey(
+        'EquipmentFacilities', on_delete=models.CASCADE, default=True, related_name="equipment_facilities_obj1")
+    equipment_facilities_obj2 = models.ForeignKey(
+        'EquipmentFacilities', on_delete=models.CASCADE, default=True, related_name="equipment_facilities_obj2")
     classes = models.ForeignKey(
         'GymClass', on_delete=models.CASCADE, default=True, related_name="classes")
     class_schedule = models.ForeignKey(

@@ -39,7 +39,8 @@ class locations_detail(View):
         phone_number = get_object_or_404(queryset, slug=slug)
         classes = get_object_or_404(queryset, slug=slug)
         class_schedule = get_object_or_404(queryset, slug=slug)
-        equipment_facilities = get_object_or_404(queryset, slug=slug)
+        equipment_facilities_obj1 = get_object_or_404(queryset, slug=slug)
+        equipment_facilities_obj2 = get_object_or_404(queryset, slug=slug)
 
         return render(
             request,
@@ -51,7 +52,8 @@ class locations_detail(View):
                 "phone_number": phone_number,
                 "classes": classes,
                 "class_schedule": class_schedule,
-                "equipment_facilities": equipment_facilities,
+                "equipment_facilities_obj1": equipment_facilities_obj1,
+                "equipment_facilities_obj2": equipment_facilities_obj2,
             },
         )
 

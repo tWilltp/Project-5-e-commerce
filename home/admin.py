@@ -26,7 +26,7 @@ class UserId(SummernoteModelAdmin):
 class LocationsAdmin(SummernoteModelAdmin):
 
     list_display = (
-        'location', 'address', 'postcode', 'phone_number', 'equipment_facilities', 'classes')
+        'location', 'address', 'postcode', 'phone_number', 'equipment_facilities_obj1', 'equipment_facilities_obj2', 'classes')
 
 
 @admin.register(GymClass)
